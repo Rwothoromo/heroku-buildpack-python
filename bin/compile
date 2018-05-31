@@ -300,7 +300,7 @@ fi
 
 
 # Add settings.py and bootstrap
-invoke create-settings --settings-path `pwd`/settings.py --database-type postgresql
+invoke create-settings --settings-path `pwd`/settings.py
 invoke bootstrap-wger --settings-path `pwd`/settings.py --no-start-server
 invoke load-fixtures --settings-path `pwd`/settings.py
 invoke migrate-db
