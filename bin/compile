@@ -299,6 +299,11 @@ if [[ ! "$BUILD_DIR" == "/app" ]]; then
 fi
 
 
+# Add settings.py and bootstrap
+invoke create-settings --settings-path `pwd`/settings.py
+invoke bootstrap-wger --settings-path `pwd`/settings.py --no-start-server
+
+
 # Django collectstatic support.
 # The buildpack automatically runs collectstatic for Django applications.
 # This is the cause for the majority of build failures on the Python platform.
