@@ -300,8 +300,8 @@ fi
 
 
 # Add settings.py and bootstrap
-invoke create-settings --settings-path `pwd`/settings.py
-invoke bootstrap-wger --settings-path `pwd`/settings.py --no-start-server
+invoke create-settings --settings-path ./settings.py
+invoke bootstrap-wger --settings-path ./settings.py --no-start-server
 
 
 # Django collectstatic support.
