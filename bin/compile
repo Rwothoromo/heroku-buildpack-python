@@ -300,7 +300,7 @@ fi
 
 
 # Add settings.py and bootstrap
-invoke create-settings --settings-path ./settings.py
+invoke create-settings --settings-path ./settings.py --database-path ./database.sqlite
 invoke bootstrap-wger --settings-path ./settings.py --no-start-server
 
 
