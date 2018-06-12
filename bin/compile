@@ -301,7 +301,9 @@ fi
 
 # Add settings.py and bootstrap
 invoke create-settings --settings-path ./settings.py --database-path ./database.sqlite
-invoke bootstrap-wger --settings-path ./settings.py --no-start-server
+python manage.py makemigrations
+invoke migrate-db
+invoke load-fixtures
 echo "from django.contrib.auth.models import User; User.objects.create_superuser('wger_admin', 'elijah.rwothoromo@andela.com', 'wger_pass')" | python manage.py shell
 
 # Django collectstatic support.
