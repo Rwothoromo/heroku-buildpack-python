@@ -305,7 +305,6 @@ python manage.py makemigrations
 invoke migrate-db
 invoke load-fixtures
 python manage.py bower_install --allow-root
-echo "from django.contrib.auth.models import User; User.objects.create_superuser('wger_admin', 'elijah.rwothoromo@andela.com', 'wger_pass')" | python manage.py shell
 
 # Django collectstatic support.
 # The buildpack automatically runs collectstatic for Django applications.
